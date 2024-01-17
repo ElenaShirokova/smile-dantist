@@ -1,0 +1,17 @@
+.main__section-promotion-text {
+    font-size: clamp(1rem, 0.648rem + 1.502vw, 2rem);
+    text-align: center;
+    margin-block-start: 20px;
+}
+
+.main__csection-promotion-text-accent {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.main__section-promotion-image {
+    /* inline-size: 100%; */
+    block-size: 100px;
+    background-image: url(../images/ny-100.png);
+    background-repeat: repeat-x;
+}

@@ -1,0 +1,89 @@
+.main__section-about {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-block-start: clamp(2.5rem, 2.28rem + 0.939vw, 3.125rem);
+}
+
+.main__section-about-title {
+    font-size: clamp(1.688rem, -0.109rem + 3.594vw, 3.125rem);
+    font-weight: 800;
+    color: #82C2FE;
+    text-shadow: 2px 2px rgba(130, 194, 254, 0.2);
+    margin-block-end: 10px;
+    max-inline-size: 600px;
+}
+
+.main__section-about-accent {
+    font-size: clamp(1.25rem, 0.469rem + 1.563vw, 1.875rem);
+    font-weight: 600;
+    margin-block-end: 30px;
+}
+
+.section-about-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-block-end: clamp(1.25rem, 1.03rem + 0.939vw, 1.875rem);
+}
+
+.section-about-list-item {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.625rem, 0.515rem + 0.469vw, 0.938rem);
+    /* max-width: 33.33333333%; */
+    max-inline-size: 30%;
+}
+
+.section-about-image {
+    inline-size: clamp(2.5rem, 1.972rem + 2.254vw, 4rem);
+}
+
+.section-about-list-item-text {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.section-advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 52px;
+    margin-inline-start: 40px;
+}
+
+.section-advantages-list-item {
+    position: relative;
+}
+
+.section-advantages-list-item::before {
+    content: "";
+    position: absolute;
+    display: block;
+    inline-size: 30px;
+    block-size: 30px;
+    top: -3px;
+    left: -40px;
+    background: #82c2fe url(../images/check.png) center center no-repeat;
+    border-radius: 50%;
+}
+
+.section-advantages-list-item-text {
+    font-size: clamp(0.625rem, 0.537rem + 0.376vw, 0.875rem);
+    font-weight: 700;
+}
+
+.main__section-about-image {
+    inline-size: 100%;
+    block-size: 100%;
+}
+
+/* Стили адаптации под планшет и мобилку от 768*1024, с запасом от 800*1024*/
+
+@media (width <= 800px) {
+    .main__section-about-title {
+        font-size: clamp(1.5rem, 1.335rem + 0.706vw, 1.688rem);
+    }
+
+    .main__section-about-accent {
+        font-size: clamp(1.125rem, 1.015rem + 0.471vw, 1.25rem);
+    }
+}
