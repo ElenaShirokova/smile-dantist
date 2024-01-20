@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     margin-block-start: clamp(2.5rem, 2.28rem + 0.939vw, 3.125rem);
+    /* z-index: -1; */
 }
 
 .main__section-about-title {
@@ -20,18 +21,16 @@
 }
 
 .section-about-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-block-end: clamp(1.25rem, 1.03rem + 0.939vw, 1.875rem);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(0.625rem, 0.405rem + 0.939vw, 1.25rem);
+    margin-block-end: 44px;
 }
 
 .section-about-list-item {
     display: flex;
     align-items: center;
     gap: clamp(0.625rem, 0.515rem + 0.469vw, 0.938rem);
-    /* max-width: 33.33333333%; */
-    max-inline-size: 30%;
 }
 
 .section-about-image {
@@ -39,19 +38,23 @@
 }
 
 .section-about-list-item-text {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
+    line-height: normal;
 }
 
 .section-advantages-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 52px;
+    justify-content: space-between;
+    gap: 24px;
     margin-inline-start: 40px;
 }
 
 .section-advantages-list-item {
     position: relative;
+    font-size: clamp(0.75rem, 0.662rem + 0.376vw, 1rem);
+    font-weight: 700;
 }
 
 .section-advantages-list-item::before {
@@ -66,24 +69,71 @@
     border-radius: 50%;
 }
 
-.section-advantages-list-item-text {
-    font-size: clamp(0.625rem, 0.537rem + 0.376vw, 0.875rem);
-    font-weight: 700;
+.main__section-about-container-image {
+    display: flex;
+    justify-content: end;
 }
 
 .main__section-about-image {
     inline-size: 100%;
-    block-size: 100%;
+    block-size: auto;
+    object-fit: contain;
+    object-position: bottom;
 }
 
-/* Стили адаптации под планшет и мобилку от 768*1024, с запасом от 800*1024*/
+
+/* Стили адаптации под планшет от 768*1024, с запасом от 800*1024*/
 
 @media (width <= 800px) {
+    .section-about-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-block-end: 30px;
+    }
+
+    .section-advantages-list {
+        margin-inline-start: 30px;
+        gap: 10px;
+    }
+
+    .section-advantages-list-item::before {
+        left: -30px;
+        top: 0;
+        inline-size: 20px;
+        block-size: 20px;
+    }
+
     .main__section-about-title {
         font-size: clamp(1.5rem, 1.335rem + 0.706vw, 1.688rem);
     }
 
     .main__section-about-accent {
         font-size: clamp(1.125rem, 1.015rem + 0.471vw, 1.25rem);
+    }
+}
+
+
+/* Стили адаптации мобилку */
+
+@media (width <= 600px) {
+    .main__section-about {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .section-advantages-list-item {
+        max-inline-size: 60%;
+    }
+
+    .section-about-list-item:last-child {
+        max-inline-size: 70%;
+    }
+
+    .main__section-about-container-image {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        max-inline-size: 38%;
     }
 }

@@ -4,7 +4,7 @@
     margin-block-start: 20px;
 }
 
-.main__csection-promotion-text-accent {
+.main__section-promotion-text-accent {
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -14,4 +14,11 @@
     block-size: 100px;
     background-image: url(../images/ny-100.png);
     background-repeat: repeat-x;
+}
+
+@media (width <= 800px) {
+    .main__section-promotion-image {
+        block-size: 50px;
+        background-image: url(../images/ny-50.png);
+    }
 }
