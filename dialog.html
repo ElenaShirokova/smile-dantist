@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/dialog-form.css">
+    <title>Document</title>
+</head>
+<body>
+    <dialog id="dialog-form-modal" class="dialog">
+        <p class="dialog-form-text">Запишитесь на бесплатную консультацию к врачу</p>
+        <p class="dialog-form-text dialog-form-text-small">Оставьте заявку или позвоните по телефону</p>
+        <form class="dialog-form">
+            <label for="name" class="dialog-form-label">
+                Ваше имя
+                <input class="dialog-form-input" type="text" placeholder="Ваше ФИО" id="name">
+            </label>
+            <label for="tel" class="dialog-form-label">
+                Введите телефон
+                <input class="dialog-form-input" type="tel" class="" placeholder="+7 (___) ___ __ __"  id="tel">
+            </label>
+            <button type="submit" class="dialog-form-button">Записаться на консультацию</button>
+            <label class="label-chekbox">
+                <input type="checkbox" class="visually-hidden" checked="">
+                <span class="chek-box"></span>
+                <p class="form__checkbox-text">
+                  Даю согласие на обработку персональных
+                </p>
+            </label>
+        </form>
+        <form class="dalog-form-close" method="dialog">
+            <button class="close-button">
+              <span class="visually-hidden">Закрыть окно</span>
+            </button>
+        </form>
+    </dialog>
+</body>
+</html>
+
+<button class="header__button"
+                        type="button"
+                        onclick="window['dialog-form-modal'].showModal()"
+                        aria-controls="dialog-form-modal"
+                        >Online консультация</button>

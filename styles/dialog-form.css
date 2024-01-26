@@ -1,0 +1,170 @@
+.dialog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    background-color: #F8F8F8;
+    /* padding: clamp(0.938rem, 0.167rem + 3.286vw, 3.125rem); */
+    padding: 50px;
+    position: fixed;
+    inset: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+dialog:not([open]) {
+    pointer-events: none;
+    opacity: 0;
+  }
+
+.dialog::backdrop {
+   background-color: #000;
+   opacity: 0.50;
+  }
+
+.dialog-form-text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    color: #36467D;
+}
+
+.dialog-form-text-small {
+    font-size: 16px;
+}
+.dialog-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    inline-size: 500px;
+    /* inline-size: 100%; */
+    margin-block: 20px 12px;
+}
+
+.dialog-form-label {
+    display: flex;
+    flex-direction: column;
+    inline-size: 100%;
+    gap: 6px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.dialog-form-input {
+    max-block-size: 60px;
+    inline-size: 100%;
+    padding: 20px 25px;
+    font-size: 18px;
+    color: #212529;
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.dialog-form-button {
+    max-inline-size: 60%;
+    background-image: linear-gradient(282.31deg, rgba(255, 255, 255, 0) 45.44%, rgba(255, 255, 255, 0) 55.69%), linear-gradient(59.13deg, #82c2fe 49.38%, #82c2fe 171.34%);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 15px 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.label-chekbox {
+    font-size: 14px;
+    opacity: 0.7;
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 0 0 0;
+    cursor: pointer;
+}
+
+.chek-box {
+    display: inline-block;
+    inline-size: 18px;
+    block-size: 18px;
+    border-radius: 4.848px;
+    border: 1px solid #dee2e6;
+    background-color: #fff;
+}
+
+input[type='checkbox']:checked + span {
+    background-image: url(../svg/chekbox.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.close-button {
+    position: absolute;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    color: #000;
+    background-image: url(../svg/close.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.75;
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+    inline-size: 22px;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+}
+
+
+/* Стили состояния */
+
+.dialog-form-input:focus,
+.close-button:focus,
+.dialog-form-button:focus {
+    outline: none;
+}
+
+.dialog-form-input:focus-visible,
+.close-button:focus-visible,
+.dialog-form-button:focus-visible,
+.dialog-form-input:active,
+.close-button:active,
+.dialog-form-button:active {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
+}
+
+.close-button:focus-visible,
+.close-button:active {
+    border-radius: 6px;
+}
+
+.dialog-form-button:hover {
+    transform: scale(1.02);
+}
+
+.close-button:hover {
+    opacity: 1;
+}
+
+
+/* Стили адаптации */
+
+@media (width <= 600px) {
+    .dialog {
+        padding-inline: 15px;
+    }
+
+    .dialog-form {
+        inline-size: 100%;
+    }
+
+    .dialog-form-button {
+        max-inline-size: 75%;
+    }
+}

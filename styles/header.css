@@ -1,8 +1,4 @@
 .header {
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-block: 10px; */
     display: flex;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.9);
@@ -10,14 +6,14 @@
     box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.13);
     position: sticky;
     top: 0;
+    z-index: 2;
 }
 
 .header__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-block: 10px;
-    /* padding-inline: clamp(0.75rem, -0.35rem + 4.695vw, 3.875rem) */
+    padding-block: 25px;
 }
 
 /* Стили лого */
@@ -26,8 +22,9 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    font-weight: 700;
-    line-height: 0.9;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
     background: linear-gradient(90deg, #8585DE 0%, #55B7FF 37.45%, #00E3E7 68.74%, #40F1BD 98.5%);
     -webkit-background-clip: text;
@@ -36,11 +33,13 @@
 }
 
 .header__logo-text {
-    font-size: clamp(1.25rem, 0.938rem + 0.625vw, 1.5rem);
+   font-size: clamp(1.125rem, 0.542rem + 2.392vw, 3.125rem); /*размер заголовка от 19пх до 50пх */ /*clamp(1.25rem, 0.938rem + 0.625vw, 1.5rem);*/
+   /*font-size: clamp(1.875rem, 0.797rem + 2.155vw, 3.125rem);  от 30px до 50пх */
 }
 
 .header__logo-text-small {
-    font-size: clamp(0.875rem, 0.563rem + 0.625vw, 1.125rem);
+    font-size: clamp(0.813rem, 0.375rem + 1.794vw, 2.313rem);  /*размер заголовка от 13пх до 37пх*/ /* clamp(0.875rem, 0.563rem + 0.625vw, 1.125rem); */
+    /*font-size: clamp(1.25rem, 0.334rem + 1.832vw, 2.313rem); размер заголовка от 20пх до 37пх*/
 }
 
 /* Стили меню */
@@ -54,7 +53,7 @@
 }
 
 .header__links-list-item-link {
-    color: rgb(85, 183, 255);
+    color: #A9A9A9;
     font-size: clamp(0.625rem, 0.156rem + 0.938vw, 1rem);
     font-weight: 500;
     padding: 10px;
@@ -73,7 +72,16 @@
     display: block;
     margin: auto;
     block-size: clamp(1.563rem, 1.016rem + 1.094vw, 2rem);
-    fill: rgba(85, 183, 255, 0.8);
+    fill: #A9A9A9;
+}
+
+.header__links-list-item-link-active {
+    background-color: rgb(85 183 255 / 16%);
+    color: rgb(85, 183, 255);
+}
+
+.header__links-list-item-link-active .icon {
+    fill: rgb(85, 183, 255);
 }
 
 /* Стили состояния кнопок меню */
@@ -82,11 +90,20 @@
     background-color: rgb(85 183 255 / 16%);
 }
 
+
+
+
+
 /* Стили контактов */
+.header-container-contacts {
+    display: flex;
+    gap: 50px;
+}
 
 .header__contacts {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 10px;
     font-weight: 700;
@@ -140,19 +157,61 @@
     display: none;
 }
 
+.addres-location,
+.address {
+    font-size: 10px;
+    font-weight: 400;
+    position: relative;
+}
+
+.addres-location::before {
+    content: '';
+    inline-size: 9px;
+    block-size: 15px;
+    background-image: url(../images/geo.png);
+    left: -20px;
+    top: 0;
+    position: absolute;
+}
+
 /* Стили состояния кнопки записи */
 
 .header__button:hover {
     transform: rotateY(-15deg) scale(1.02);
 }
 
-/* svg {
-    display: none;
-} */
+/* Стили состояния кнопки записи */
+.header__logo:focus,
+.header__links-list-item-link:focus,
+.header__button:focus,
+.header__contacts-number:focus {
+    outline: none;
+}
+
+.header__logo:focus-visible,
+.header__links-list-item-link:focus-visible,
+.header__contacts-number:focus-visible {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
+}
+
+.header__button:focus-visible {
+    border-color: #FF3F3F;
+}
+
+
+
 
 /* Стили адаптации под планшет и мобилку от 768*1024, с запасом от 800*1024*/
 
-@media (width <= 800px) {
+@media (900px < width <= 1440px) {
+    .header__contacts-address {
+        display: none;
+    }
+}
+
+
+@media (width <= 900px) {
     .header__logo-text {
         font-size: clamp(0.75rem, 0.309rem + 1.882vw, 1.25rem);
     }
@@ -249,6 +308,10 @@
         display: block;
         fill: #fff;
         block-size: clamp(1.688rem, 1.522rem + 0.706vw, 1.875rem);
+    }
+
+    .header__contacts-address {
+        display: none;
     }
 
 }
