@@ -10,10 +10,11 @@
 
 .content-section {
     inline-size: clamp(22.5rem, 2.552rem + 81.839vw, 90.938rem); /* секция контента 360*1455 */ /*clamp(45rem, -1.875rem + 93.75vw, 82.5rem);*/
+    margin: auto;
 }
 
 .main {
-    margin: auto;
+    /* margin: auto; */
 }
 
 
