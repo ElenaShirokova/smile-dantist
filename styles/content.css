@@ -1,0 +1,416 @@
+/* Секция с заголовком страницы */
+.section__offer {
+    background-image: url(../images/bg-img-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* margin-block-end: clamp(2.188rem, 0.821rem + 5.605vw, 6.875rem); 35px 110px; */
+}
+
+.section__offer .content-section {
+    padding-block-start: clamp(1.875rem, -0.129rem + 8.221vw, 8.75rem); /*30px 140px*/
+    padding-block-end: clamp(1.875rem, 0.873rem + 4.111vw, 5.313rem); /*30px 85px*/
+}
+
+.title {
+    font-size: clamp(1.875rem, 1.511rem + 1.495vw, 3.125rem); /*30px 50px */
+    font-weight: 700;
+    line-height: 1.2;
+    max-inline-size: 500px;
+    padding-block-end: 35px;
+    color: var(--heading-color);
+}
+
+.section-text-accent {
+    font-size: clamp(0.875rem, 0.693rem + 0.747vw, 1.5rem); /*14px 24px*/
+    font-weight: 600;
+    max-inline-size: 470px;
+    line-height: normal;
+    color: var(--text-color);
+}
+
+.section-offer-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    margin-block-start: clamp(1.875rem, 0.235rem + 6.726vw, 7.5rem); /*30px 120px */
+    color: var(--text-color);
+}
+
+.section-offer-list-item {
+    position: relative;
+    max-inline-size: 410px;
+}
+
+.offer-list-item-heading {
+    font-size: clamp(1rem, 0.745rem + 1.046vw, 1.875rem); /*16px 30px*/
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-block-end: clamp(0.625rem, 0.261rem + 1.495vw, 1.875rem); /*10px 30px*/
+    max-inline-size: 260px;
+}
+
+.item-text-accent {
+    font-size: clamp(0.875rem, 0.766rem + 0.448vw, 1.25rem); /*14px 20px*/
+    font-weight: 600;
+    line-height: normal;
+    color: var(--text-color);
+}
+
+
+/* Секция голубая, с круглой картинкой с улыбкой */
+.section-container-offer-price {
+    background-image: url(../images/bg-img-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-block: 170px;
+}
+
+.section-offer-price {
+    display: flex;
+    justify-content: end;
+    padding: 55px 70px 70px;
+    position: relative;
+}
+
+.section-offer-price::before {
+    content: '%';
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    padding-block-start: 10px;
+    position: absolute;
+    inline-size: 60px;
+    block-size: 60px;
+    background-image: url(../images/Subtract.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0;
+    left: 0;
+}
+
+.section-offer-price-image {
+    max-inline-size: 20vw;
+    position: absolute;
+    top: -80px;
+    left: clamp(6.25rem, -40.625rem + 52.083vw, 15.625rem) /*100px 250px */
+}
+
+.section-container-offer-price-text {
+    line-height: 1;
+}
+
+.section-offer-price-heading {
+    font-size: clamp(1.563rem, 1.289rem + 1.121vw, 2.5rem); /*20px 40px */
+    font-weight: 800;
+    color: rgba(16, 23, 72, 1);
+}
+
+.section-offer-price__text-color {
+    color: var(--text-color-accent);
+    font-size: clamp(0.938rem, 0.573rem + 1.495vw, 2.188rem); /*15px 35px */
+}
+
+.section-offer-price__text-color-accent {
+    font-weight: 700;
+}
+
+/* Секция преимущества BioMim */
+
+.container-about-method {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.about-method-list {
+    margin-inline-end: 20px;
+}
+
+.about-method-list-item {
+    font-size: clamp(1rem, 0.891rem + 0.448vw, 1.375rem);
+    font-weight: 600;
+    line-height: 1.4;
+    background-color:#f7f7fb;
+    color: var(--text-color);
+    /* padding: 30px 110px 25px; */
+    padding-block-start: clamp(0.625rem, 0.261rem + 1.495vw, 1.875rem); /* 10px 30px */
+    padding-block-end: clamp(0.625rem, 0.352rem + 1.121vw, 1.563rem); /* 10px 25px */
+    padding-inline-start: clamp(3.75rem, 2.839rem + 3.737vw, 6.875rem);
+    padding-inline-end: 10px;
+    border-radius: 17px;
+    box-shadow: 0px 2.976px 24.403px 0px rgba(0, 0, 0, 0.25);
+    margin-block-end: 15px;
+}
+
+.about-method-list-item-text {
+    position: relative;
+}
+
+.about-method-list-item-text::before {
+    content: "";
+    display: block;
+    inline-size: 26px;
+    block-size: 26px;
+    border: 2px solid #8F8E8C;
+    border-radius: 25%;
+    background-image: url(../images/list-style.png);
+    background-repeat: no-repeat;
+    background-position: -1px -3px;
+    position: absolute;
+    left: -45px;
+    /* bottom: 30px; */
+    top: 0;
+}
+
+.about-method-img {
+    width: 100%;
+}
+
+
+/* Секция с опрос */
+
+.section-survey {
+    padding: clamp(1.25rem, 1.031rem + 0.897vw, 2rem); /* 20px 32px */
+    margin-block: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-survey-title {
+    max-inline-size: 65%;
+}
+
+.section-survey-button-container {
+    margin-block-start: clamp(1.25rem, 1.159rem + 0.374vw, 1.563rem); /* 20px 25px */
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-inline-size: 65%;
+}
+
+.section-survey-text {
+    order: 1;
+    color: var(--text-color);
+}
+
+.section-survey-button {
+    min-inline-size: 210px;
+    min-block-size: 60px;
+}
+
+.section-survey::after {
+    content: "";
+    block-size: 120%;
+    inline-size: 40%;
+    background-image: url(../images/note-1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: -10%;
+}
+
+/* Секция Варианты неправильного прикуса */
+
+.heading {
+    text-align: center;
+}
+
+.section-prikus-list {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-block-end: 30px;
+}
+
+.section-prikus-list-item:first-child {
+    grid-row: 1 / 3;
+}
+
+.section-prikus-list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    padding-block-start: 2.5rem;
+    border: 2px solid #ececf4;
+    border-radius: 0.75rem;
+    font-size: clamp(0.875rem, 0.839rem + 0.149vw, 1rem); /* 14px 16px */
+    position: relative;
+}
+
+.list-item-prikus-title {
+    color: var(--heading-color);
+    font-weight: 700;
+}
+
+.list-item-prikus-text {
+    color: var(--text-color);
+}
+
+.section-prikus-list-item::before {
+    content: "";
+    inline-size: 32px;
+    block-size: 32px;
+    background-color: var(--accent-color-1);
+    background-size: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+    border-radius: 6px;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+
+}
+
+.section-text-prikus-list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.813rem, 0.758rem + 0.224vw, 1rem); /* 13px 16px */
+    font-size: clamp(0.813rem, 0.758rem + 0.224vw, 1rem); /* 13px 16px */
+    color: var(--text-color);
+    padding-inline-start: 15px;
+}
+
+
+@media (900px < width <= 1440px) {
+    .section-container-offer-price {
+        padding-block-start: 250px;
+    }
+
+    .section-offer-price {
+        flex-direction: column;
+        align-items: center;
+        padding-block-start: 180px;
+    }
+
+    .section-offer-price-image {
+        max-inline-size: 30vw;
+        top: -50%;
+        left: 35%;
+    }
+
+    .section-container-offer-price-text {
+        text-align: center;
+    }
+}
+
+@media (width <= 900px) {
+    .section-offer-list {
+        justify-content: center;
+    }
+
+    .section-offer-list-item {
+        gap: 30px;
+        max-inline-size: 250px;
+    }
+
+    .title,
+    .section-text-accent {
+        max-inline-size: 100%;
+        text-align: center;
+    }
+
+
+    .section-offer-list-item {
+        max-inline-size: 80%;
+}
+
+    .section-offer-price {
+        /* padding-block-start: 180px; */
+        /* padding-block-start: 20vw;
+        padding-block-end: 10px; */
+        padding: 20vw 70px 15px;
+    }
+
+    .section-offer-price-image {
+        max-inline-size: 30vw;
+        /* top: -35%; */
+        left: 35%;
+    }
+
+    .section-container-offer-price-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .section-offer-price__text-color {
+        max-inline-size: 150px;
+    }
+
+    .container-about-method {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+        gap: 20px;
+    }
+
+    .about-method-list-item-text::before {
+        inline-size: 20px;
+        block-size: 20px;
+        top: 3px;
+        left: -40px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .about-method-img {
+        inline-size: 90%;
+    }
+
+    .section-survey {
+        padding-block-end: 80px;
+    }
+
+    .section-survey-title {
+        max-inline-size: 100%;
+    }
+
+    .section-survey-button-container {
+        flex-direction: column;
+        align-items: start;
+        max-inline-size: 100%;
+    }
+
+    .section-survey-text {
+        order: 0;
+    }
+
+    .section-survey::after {
+        inline-size: 250px;
+        block-size: 250px;
+        top: 70%;
+        right: -14%;
+    }
+
+    .section-prikus-list {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .section-prikus-list-item {
+        min-block-size: 8rem;
+    }
+
+    .section-prikus-list-item:first-child {
+        grid-row: 1 / 1;
+    }
+
+    .list-item-prikus-img {
+        display: none;
+    }
+}
+
+/* @media (width <= 500px) {
+
+} */

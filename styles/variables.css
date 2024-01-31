@@ -1,11 +1,12 @@
 :root {
-   
-    --main-bg-image:
-    --heading-color:
-    --accent-color:
-    --border-color:
-    --title-text-color:
-    --text-color:
-    --text-size:
+
+    --main-bg-image:;
+    --heading-color: rgba(16, 23, 72, 1);
+    --accent-color-1: #55b7ff;
+    --border-color:;
+    --title-text-color:;
+    --text-color: rgba(20, 21, 67, 1);
+    --text-color-accent: rgba(240, 146, 80, 1);
+    --text-size:;
 
 }

@@ -57,7 +57,7 @@
     font-weight: 700;
 }
 
-.section-advantages-list-item::before {
+/* .section-advantages-list-item::before {
     content: "";
     position: absolute;
     display: block;
@@ -67,7 +67,7 @@
     left: -40px;
     background: #82c2fe url(../images/check.png) center center no-repeat;
     border-radius: 50%;
-}
+} */
 
 .main__section-about-container-image {
     display: flex;
